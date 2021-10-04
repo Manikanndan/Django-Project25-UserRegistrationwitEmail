@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <center>
-        <h1>Registration Page</h1>
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            
-                {{uf.as_p}}
-                {{pf.as_p}}
+{% extends 'master.html' %}
 
-            <input type="submit" value="Register">
-        </form>
+{% block title %}
+    <title>Registration Page</title>
+{% endblock %}
+
+{% block body_block %}
+    <center>
+        <div class='container'>
+            <div class="jumbotron">
+                <br>
+                <h1><u>Registration Page</u></h1><br>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                        {{uf.as_p}}
+                        {{pf.as_p}}
+
+                    <input type="submit" class="btn btn-success btn-md text-warning" value="Register">
+                </form>
+            </div>
+        </div>
     </center>
-</body>
-</html>
+{% endblock %}

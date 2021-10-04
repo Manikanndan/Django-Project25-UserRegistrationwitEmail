@@ -23,4 +23,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('fun_register/',fun_register,name='fun_register'),
+    path('fun_home/',fun_home,name='fun_home'),
+    path('fun_login/',fun_login,name='fun_login'),
+    path('fun_logout/',fun_logout,name='fun_logout'),
+    path('fun_profile/',fun_profile,name='fun_profile'),
+    path('fun_changepassword/',fun_changepassword,name='fun_changepassword'),
+    path('fun_forgotpassword/',fun_forgotpassword,name='fun_forgotpassword'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
